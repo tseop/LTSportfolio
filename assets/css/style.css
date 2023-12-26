@@ -46,9 +46,9 @@ button { padding: 0; margin: 0; border: 0; cursor: pointer; background-color: tr
 .container-wrapper { padding-top: 70px;}
 
 /* section */
-section.main-section { position: relative; width: 100%; height: 100vh;}
-.title-wrap { padding-top: 60px; margin-bottom: 30px;}
-.title-wrap .title { font-size: 32px; line-height: 40px;}
+section.main-section { position: relative; width: 100%; height: calc(var(--vh, 1vh) * 100);}
+.section-title-wrap { padding-top: 60px; margin-bottom: 30px;}
+.section-title-wrap .section-title { font-size: 32px; line-height: 40px;}
 
 /* home */
 .main-section.home, .main-section.contact { background: #494FEC;}
@@ -80,8 +80,8 @@ section.main-section { position: relative; width: 100%; height: 100vh;}
     .main-section.home .main-title-area .main-title { font-size: 24px; line-height: 36px;}
     .main-section.home .scroll-induce-area .text { font-size: 18px;}
 
-    .title-wrap { padding-top: 50px; margin-bottom: 20px;}
-    .title-wrap .title { font-size: 24px; line-height: 32px;}
+    .section-title-wrap { padding-top: 50px; margin-bottom: 20px;}
+    .section-title-wrap .section-title { font-size: 24px; line-height: 32px;}
 }
 
 /* about */

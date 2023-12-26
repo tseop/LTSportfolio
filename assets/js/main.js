@@ -1,4 +1,13 @@
 $(function (){
+
+    // mobile screensize
+    function setScreenSize() {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+    setScreenSize();
+    window.addEventListener('resize', setScreenSize);
+
     // gnb position
     $(window).scroll(function () {
         fixedScr();
@@ -12,13 +21,13 @@ $(function (){
                 scrNum2 = fixCont.eq(1).offset(),
                 scrNum3 = fixCont.eq(2).offset(),
                 scrNum4 = fixCont.eq(3).offset();
-            if (scrPos > scrNum1.top - 80 && scrPos < scrNum2.top - 80) {
+            if (scrPos > scrNum1.top - 71 && scrPos < scrNum2.top - 71) {
                 fixTab.find('li').eq(0).addClass('active').siblings().removeClass('active');
-            } else if (scrPos > scrNum2.top - 80 && scrPos < scrNum3.top - 80) {
+            } else if (scrPos > scrNum2.top - 71 && scrPos < scrNum3.top - 71) {
                 fixTab.find('li').eq(1).addClass('active').siblings().removeClass('active');
-            } else if (scrPos > scrNum3.top - 80 && scrPos < scrNum4.top - 80) {
+            } else if (scrPos > scrNum3.top - 71 && scrPos < scrNum4.top - 71) {
                 fixTab.find('li').eq(2).addClass('active').siblings().removeClass('active');
-            } else if (scrPos > scrNum4.top - 80) {
+            } else if (scrPos > scrNum4.top - 71) {
                 fixTab.find('li').eq(3).addClass('active').siblings().removeClass('active');
             }
         }
