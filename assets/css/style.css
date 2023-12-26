@@ -47,7 +47,7 @@ button { padding: 0; margin: 0; border: 0; cursor: pointer; background-color: tr
 .container-wrapper { padding-top: 70px;}
 
 /* section */
-section.main-section { position: relative; padding: 100px 0; width: 100%; height: 100%;}
+section.main-section { position: relative; padding: 100px 0; width: 100%; height: 100%; overflow: hidden;}
 .section-title-wrap { margin-bottom: 30px;}
 .section-title-wrap .section-title { font-size: 32px; line-height: 40px;}
 
@@ -155,7 +155,7 @@ section.main-section { position: relative; padding: 100px 0; width: 100%; height
     position: absolute;
     left: 0; 
     bottom: 0; 
-    width: 250px; 
+    width: 150px; 
     height: 26px; 
     text-align: center;
     font-size: 0;
@@ -205,7 +205,9 @@ section.main-section { position: relative; padding: 100px 0; width: 100%; height
 .main-section.work .work-info-wrap .swiper-control-area .swiper-button-play { display: none; background-position: 10px center; background-size: 8px 11px; background-image: url(../images/common/ico_swiper_play.png);}
 
 .main-section.work .work-img-wrap { position: absolute; overflow: visible; top: 170px; left: 50%; right: 0;}
-.main-section.work .work-img-wrap .swiper-slide { overflow: hidden; border-radius: 24px; width: 500px; height: 400px; margin-right: 20px; background: #ccc;}
+.main-section.work .work-img-wrap .swiper-slide { overflow: hidden;  width: 500px; height: 400px; margin-right: 20px; border-radius: 24px;}
+.main-section.work .work-img-wrap .swiper-slide a { display: block; width: 100%; height: 100%;}
+.main-section.work .work-img-wrap .swiper-slide a img { width: 100%; height: 100%;}
 
 @media (max-width:768px) {
     .main-section.work .work-info-wrap { width: 100%; height: 200px;}
@@ -218,7 +220,7 @@ section.main-section { position: relative; padding: 100px 0; width: 100%; height
     .main-section.work .work-info-wrap .work-info .btn-box [class^=btn-] .text { font-size: 12px;}
 
     .main-section.work .work-img-wrap { position: relative; display: block; margin-top: 30px; top: 0; left: 10px;}
-    .main-section.work .work-img-wrap .swiper-slide { width: 340px; margin-right: 10px; height: 250px;}
+    .main-section.work .work-img-wrap .swiper-slide { width: 350px; height: 250px; margin-right: 10px; }
 }
 
 /* contact */
@@ -227,17 +229,15 @@ section.main-section { position: relative; padding: 100px 0; width: 100%; height
 .main-section.contact .contact-wrap .title-area .title { font-size: 48px; color: #FFF7EB;}
 .main-section.contact .contact-wrap .contact-list-area { margin-top: 30px;}
 .main-section.contact .contact-wrap .contact-list-area .list-tit { margin-bottom: 35px; font-size: 32px; color: #FFF7EB;}
-.main-section.contact .contact-wrap .contact-list-area .contact-list .contact-item { margin-top: 35px;}
+.main-section.contact .contact-wrap .contact-list-area .contact-list .contact-item { margin-top: 35px; font-size: 24px; color: #FFF7EB;}
 .main-section.contact .contact-wrap .contact-list-area .contact-list .contact-item:first-child { margin-top: 0;}
-.main-section.contact .contact-wrap .contact-list-area .contact-list .contact-item .text { font-size: 24px; color: #FFF7EB;}
-.main-section.contact .contact-wrap .contact-list-area .contact-list .contact-item .text a { color: inherit;}
-.main-section.contact .contact-wrap .contact-list-area .contact-list .contact-item .text a:hover { text-decoration: underline;}
+.main-section.contact .contact-wrap .contact-list-area .contact-list .contact-item a { color: inherit;}
+.main-section.contact .contact-wrap .contact-list-area .contact-list .contact-item a:hover { text-decoration: underline;}
 @media (max-width:768px) {
     .main-section.contact .contact-wrap .title-area .title { font-size: 36px;}
     .main-section.contact .contact-wrap .contact-list-area .list-tit { font-size: 28px;}
-    .main-section.contact .contact-wrap .contact-list-area .contact-list .contact-item .text { font-size: 18px;}
+    .main-section.contact .contact-wrap .contact-list-area .contact-list .contact-item { font-size: 18px;}
 }
-
 
 /* footer */
 .footer-wrapper { background: #000;}
