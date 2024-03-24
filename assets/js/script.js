@@ -54,29 +54,6 @@ function setTabs(){
     });
 }
 
-// 로딩화면
-// function setLoading(){
-//     let loader = document.querySelector('.loading-wrapper');
-//     let html = document.querySelector('html');
-//     html.style.overflow = 'hidden'; 
-    
-//     window.addEventListener('load', ()=>{
-    
-//          setTimeout(() => { 
-            
-//             html.style.overflow = 'auto';
-              
-//             setTimeout(() => {
-//                 loader.style.display = 'none';
-//             }, 300);
-            
-//         }, 3500);
-
-//         return false;
-        
-//     })
-// }
-
 // 스크롤 애니메이션
 function setScrollAnimate(){
     let section = document.querySelectorAll('.animate');
@@ -99,6 +76,5 @@ document.addEventListener('DOMContentLoaded', function(){
     setFixedHeader();
     setAllMenu();
     setTabs();
-    // setLoading();
     setScrollAnimate();
 });

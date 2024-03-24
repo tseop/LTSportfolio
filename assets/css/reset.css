@@ -68,3 +68,6 @@ img {
 *, *::after, *::before {
     box-sizing: border-box;
 }
+strong, b {
+	font-weight: 800;
+}
