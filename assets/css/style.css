@@ -52,7 +52,7 @@
 }
 
 /* ALL 메뉴 영역 */
-.header-wrapper .allmenu-wrap { position: fixed; top: 0; left: 0; z-index: 100; width: 100%; height: 100%; background: rgb(0, 0, 255); opacity: 0; transform: translateX(100%); transition-property: opacity, transform; transition-duration: 0.5s; transition-timing-function: ease;}
+.header-wrapper .allmenu-wrap { position: fixed; top: 0; left: 0; z-index: 100; width: 100%; height: 100%; background: #0b0bca; opacity: 0; transform: translateX(100%); transition-property: opacity, transform; transition-duration: 0.5s; transition-timing-function: ease;}
 .header-wrapper .allmenu-wrap.open { opacity: 1; transform: translateX(0);}
 .allmenu-wrap .fix-header .logo .logo-link svg g { fill: #fff;}
 .allmenu-wrap .fix-header .btn-toggle .line { top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); background: #fff;}
@@ -119,7 +119,7 @@
 .container-wrapper .home-section { width: 100vw; height: 100vh;}
 .main-visual { width: 100%; height: 100%;}
 .main-visual .proj-item .img-area, .sub-visual .img-area { position: relative; width: 100%; height: 100%; overflow: hidden;}
-.main-visual .proj-item .img-area::before, .sub-visual .img-area::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.2);}
+.main-visual .proj-item .img-area::before, .sub-visual .img-area::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.3);}
 .main-visual .proj-item .img-area::before { z-index: 9;}
 .main-visual .proj-item .img-area img, .sub-visual .img-area img { width: 100%; height: 100%; object-fit: cover;}
 /* .main-visual .proj-item .img-area img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.3); transition: all 1s ease;} */
@@ -183,7 +183,7 @@
 }
 
 /* 서브비주얼 */
-.sub-visual { position: relative; width: 100vw; height: 100vh; background : rgb(0, 0, 255);}
+.sub-visual { position: relative; width: 100vw; height: 100vh; background: #0b0bca;}
 .sub-visual .slogan { position: absolute; top: 50%; left: 60px; transform: translate(0, -50%); font-size: 120px; line-height: 160px; font-weight: 800; letter-spacing: -2px; color: #fff; animation: sloganInAni 1.5s ease;}
 .sub-visual img { width: 100%; height: 100%; object-fit: cover;}
 .sub-visual .scroll-induce-wrap { position: absolute; left: 50%; bottom: 30px; transform: translateX(-50%); text-align: center;}
@@ -378,7 +378,7 @@
 .contect-item-wrap .contect-item { width: calc((100% - 15px) / 2);}
 .contect-item-wrap .contect-item + .contect-item { margin-left: 15px;}
 .contect-item-wrap .contect-item .contect-link { display: block; padding: 100px 50px; border: 1px solid #666; background: #fff; border-radius: 24px; transform: translateY(0); transition: ease 0.3s;}
-.contect-item-wrap .contect-item .contect-link:hover { background: rgb(0, 0, 255); border: 0; transform: translateY(-20px); box-shadow: 0 20px 20px 5px rgba(0, 0, 255, 0.3);}
+.contect-item-wrap .contect-item .contect-link:hover { background: #0b0bca; border: 0; transform: translateY(-20px); box-shadow: 0 20px 20px 5px rgba(11, 11, 202, 0.3);}
 .contect-item-wrap .contect-item .contect-link:hover span { color: #fff;}
 .contect-item-wrap .contect-item .contect-link .address-area { margin-bottom: 70px;}
 .contect-item-wrap .contect-item .contect-link .address-area span { position: relative; display: inline-block; font-size: 45px; font-weight: 700; letter-spacing: -5px; }
@@ -434,7 +434,7 @@
 }
 
 /* 로딩 */
-.loading-wrapper { position:fixed; top: 0; left: 0; right: 0; bottom: 0; width:100%; height:100%; background:rgb(0, 0, 255); z-index:1000;}
+.loading-wrapper { position:fixed; top: 0; left: 0; right: 0; bottom: 0; width:100%; height:100%; background: #0b0bca; z-index:1000;}
 .loading-wrapper .loading-text-wrap { position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 100%; text-align: center;}
 .loading-wrapper .loading-text-wrap span { display: inline-block; font-size: 84px; font-weight: 800; color: #fff; opacity: 0; animation: loadAni 2700ms ease-in-out;}
 .loading-wrapper .loading-text-wrap span:nth-child(1) { animation-delay: 1.2s;}
