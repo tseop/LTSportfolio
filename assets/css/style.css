@@ -1,5 +1,6 @@
 @import url("reset.css");
 @import url("font.css");
+@import url("animation.css");
 
 /* 대체텍스트 */
 .hidden {
@@ -189,22 +190,6 @@
 .sub-visual .scroll-induce-wrap .text { display: block; font-size: 24px; font-weight: 700; color: #fff;}
 .sub-visual .scroll-induce-wrap .ico-scroll-induce { display: inline-block; width: 17px; height: 18px; margin-top: 5px; background-image: url(../images/ico_scroll_induce.png); animation: bounceAni 2s infinite; transition: all 0.2s;}
 
-@keyframes sloganInAni {
-    0% {
-        left: -100%;
-    }
-    100% {
-        left: 60px;
-    }
-}
-@keyframes bounceAni {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(10px);
-    }
-} 
 @media (max-width : 1200px) {
     .sub-visual .slogan { font-size: 90px; line-height: 130px;}
 }
@@ -423,27 +408,6 @@
 .contect-item-wrap .contect-item .contect-link .contect-info-area .ico-arrow svg { width: 30px; height: 30px;}
 .contect-item-wrap .contect-item .contect-link:hover .contect-info-area .ico-arrow svg g path { fill: #fff;}
 
-@keyframes textUpAni {
-    0% {
-        top: 0;
-    }
-    20% {
-        top: -20px;
-    }
-    40% {
-        top: 0;
-    }
-    60% {
-        top: 0;
-    }
-    80% {
-        top: 0;
-    }
-    100% {
-        top: 0;
-    }
-}
-
 @media (max-width : 1240px) {
     .contect-item-wrap .contect-item .contect-link { padding: 100px 30px;}
     .contect-item-wrap .contect-item .contect-link .address-area span { font-size: 36px;}
@@ -469,22 +433,6 @@
     .contect-item-wrap .contect-item .contect-link .contect-info-area .ico-arrow svg { width: 18px; height: 18px;}
 }
 
-
-
-/* 애니메이션 */
-.animate { 
-    opacity: 0;
-    transition-property: opacity, transform;
-    transform: translateY(150%);
-    transition-duration: 1s;
-    transition-delay: 0.1s;
-    transition-timing-function: ease-in-out;
-}
-.animate.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 /* 로딩 */
 .loading-wrapper { position:fixed; top: 0; left: 0; right: 0; bottom: 0; width:100%; height:100%; background:rgb(0, 0, 255); z-index:1000;}
 .loading-wrapper .loading-text-wrap { position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 100%; text-align: center;}
@@ -502,24 +450,6 @@
 .loading-wrapper .loading-text-wrap span:nth-child(11) { animation-delay: 0.2s;}
 .loading-wrapper .loading-text-wrap span:nth-child(12) { animation-delay: 0.1s;}
 
-@keyframes loadAni {
-    0% {
-      opacity: 0;
-      transform: translateX(-1000%);
-    }
-    33% {
-      opacity: 1;
-      transform: translateX(0px);
-    }
-    66% {
-      opacity: 1;
-      transform: translateX(0px);
-    }
-    100% {
-      opacity: 0;
-      transform: translateX(1000%);
-    }
-}
 
 @media (max-width : 768px) {
     .loading-wrapper .loading-text-wrap span { font-size: 64px;}

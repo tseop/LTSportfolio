@@ -1,0 +1,72 @@
+/* 애니메이션 */
+.animate { 
+    opacity: 0;
+    transition-property: opacity, transform;
+    transform: translateY(150%);
+    transition-duration: 1s;
+    transition-delay: 0.1s;
+    transition-timing-function: ease-in-out;
+}
+.animate.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 서브비주얼 슬로건 애니 */
+@keyframes sloganInAni {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 60px;
+    }
+}
+/* 스크롤 바운스 애니 */
+@keyframes bounceAni {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+/* 텍스트 물결 애니 */
+@keyframes textUpAni {
+    0% {
+        top: 0;
+    }
+    20% {
+        top: -20px;
+    }
+    40% {
+        top: 0;
+    }
+    60% {
+        top: 0;
+    }
+    80% {
+        top: 0;
+    }
+    100% {
+        top: 0;
+    }
+}
+/* 로딩 애니 */
+@keyframes loadAni {
+    0% {
+      opacity: 0;
+      transform: translateX(-1000%);
+    }
+    33% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+    66% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(1000%);
+    }
+} 
