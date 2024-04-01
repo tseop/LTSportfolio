@@ -116,7 +116,7 @@
 }
 
 /* home + 메인 비주얼 영역 */
-.container-wrapper .home-section { width: 100vw; height: 100vh;}
+.container-wrapper .home-section { width: 100vw; height : calc(var(--vh, 1vh) * 100);}
 .main-visual { width: 100%; height: 100%;}
 .main-visual .proj-item .img-area, .sub-visual .img-area { position: relative; width: 100%; height: 100%; overflow: hidden;}
 .main-visual .proj-item .img-area::before, .sub-visual .img-area::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.2);}
@@ -183,7 +183,7 @@
 }
 
 /* 서브비주얼 */
-.sub-visual { position: relative; width: 100vw; height : 100vh; background : rgb(0, 0, 255);}
+.sub-visual { position: relative; width: 100vw; height : calc(var(--vh, 1vh) * 100); background : rgb(0, 0, 255);}
 .sub-visual .slogan { position: absolute; top: 50%; left: 60px; transform: translate(0, -50%); font-size: 120px; line-height: 160px; font-weight: 800; letter-spacing: -2px; color: #fff; animation: sloganInAni 1.5s ease;}
 .sub-visual img { width: 100%; height: 100%; object-fit: cover;}
 .sub-visual .scroll-induce-wrap { position: absolute; left: 50%; bottom: 30px; transform: translateX(-50%); text-align: center;}
