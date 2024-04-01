@@ -11,7 +11,7 @@
     clip: rect(1px, 1px, 1px, 1px);
 }
 
-.wrapper { position: relative; overflow: hidden;}
+.wrapper { position: relative; overflow: hidden; background: #fff;}
 /* 기본해상도 */
 .container-wrapper .wrap { padding: 100px 60px 150px;}
 
@@ -23,7 +23,6 @@
 }
 
 /*  헤더 공통 영역 */
-/* .header-wrapper { position: fixed;} */
 .fix-header { position: absolute; top: 0; left: 0; z-index: 10; width: 100%; padding: 40px 60px; transition: all 0.3s ease;}
 .fix-header.fixed { position: fixed; background: #fff; padding: 30px 60px;}
 .fix-header::after { content: ''; display: block; clear: both;}
@@ -94,7 +93,7 @@
     .allmenu-wrap .menu-area .info-box dl dd { font-size: 24px;} 
     
 }
-@media (max-width : 540px) {
+@media (max-width : 560px) {
     .allmenu-wrap .menu-area { flex-direction: column; align-items: center;}
     .allmenu-wrap .menu-area .info-box, .allmenu-wrap .menu-area .gnb-box { width: 100%;}
     .allmenu-wrap .menu-area .info-box { padding-top: 20px; margin-top: 20px; margin-left: 0;  border-top: 2px solid #fff;}
@@ -118,9 +117,10 @@
 /* home + 메인 비주얼 영역 */
 .container-wrapper .home-section { width: 100vw; height: 100vh;}
 .main-visual { width: 100%; height: 100%;}
-.main-visual .proj-item .img-area { position: relative; width: 100%; height: 100%; overflow: hidden;}
-.main-visual .proj-item .img-area::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.2); z-index: 9;}
-.main-visual .proj-item .img-area img { width: 100%; height: 100%; object-fit: cover;}
+.main-visual .proj-item .img-area, .sub-visual .img-area { position: relative; width: 100%; height: 100%; overflow: hidden;}
+.main-visual .proj-item .img-area::before, .sub-visual .img-area::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.2);}
+.main-visual .proj-item .img-area::before { z-index: 9;}
+.main-visual .proj-item .img-area img, .sub-visual .img-area img { width: 100%; height: 100%; object-fit: cover;}
 /* .main-visual .proj-item .img-area img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.3); transition: all 1s ease;} */
 .main-visual .swiper-wrapper .swiper-slide-active .img-area img{ transform: scale(1);}
 .main-visual .swiper-button-prev, .main-visual .swiper-button-next { display: block; left: inherit; right: 0; width: 70px; height: 70px;  margin-top: -35px; background-color: rgba(0, 0, 0, 0.5); background-image: url(../images/img_arrow_left.png); background-size: 12px auto;} 
@@ -136,14 +136,15 @@
 .main-visual .swiper-pagination span:nth-child(1)::before { content: "HOLLYS";}
 .main-visual .swiper-pagination span:nth-child(2)::before { content: "DIPTYQUE";}
 .main-visual .swiper-pagination span + span:after { content: ""; display: block; position: absolute; top: 18px; left: 0; width: 1px; height: 24px; background: #888;}
-.main-visual .proj-item .info-area { position: absolute; top: 50%; left: 60px; transform: translateY(-50%); z-index: 10; color: #fff;}
-.main-visual .proj-item .info-area .slide-cate { margin-bottom: 20px; font-size: 32px; font-weight: 700;}
-.main-visual .proj-item .info-area .slide-title { font-size: 48px; font-weight: 800;}
-.main-visual .proj-item .info-area .slide-desc { margin-top: 30px; font-size: 36px; font-weight: 600;}
-.main-visual .proj-item .info-area .btn { display: inline-block; width: 250px; height: 60px; padding: 17px 0 19px; margin-top: 40px; border: 3px solid #fff; border-radius: 24px; text-align: center;}
-.main-visual .proj-item .info-area .btn:hover { background: #fff; }
-.main-visual .proj-item .info-area .btn .text { font-size: 24px; font-weight: 700;}
-.main-visual .proj-item .info-area .btn:hover .text { color: #000;}
+.proj-info-area { position: absolute; top: 50%; left: 60px; transform: translateY(-50%); color: #fff;}
+.main-visual .proj-info-area { z-index: 10;}
+.proj-info-area .slide-cate { margin-bottom: 20px; font-size: 32px; font-weight: 700;}
+.proj-info-area .slide-title { font-size: 48px; font-weight: 800;}
+.proj-info-area .slide-desc { margin-top: 30px; font-size: 36px; font-weight: 600;}
+.btn { display: inline-block; width: 250px; height: 60px; padding: 17px 0 19px; margin-top: 40px; border: 3px solid #fff; border-radius: 24px; text-align: center;}
+.btn:hover { background: #fff; }
+.btn .text { font-size: 24px; font-weight: 700;}
+.btn:hover .text { color: #000;}
 
 @media (max-width : 1024px) {
     .main-visual .swiper-button-prev, .main-visual .swiper-button-next { width: 60px; height: 60px; margin-top: -30px;} 
@@ -151,37 +152,37 @@
     .main-visual .swiper-button-next::before { width: 30px;}
     .main-visual .swiper-pagination span { padding: 0 10px; font-size: 20px; line-height: 50px;}
     .main-visual .swiper-pagination span + span:after { top: 17px; height: 16px;}
-    .main-visual .proj-item .info-area { left: 40px;}
-    .main-visual .proj-item .info-area .slide-cate { margin-bottom: 15px; font-size: 28px;}
-    .main-visual .proj-item .info-area .slide-title { font-size: 44px;}
-    .main-visual .proj-item .info-area .slide-desc { margin-top: 25px; font-size: 32px;}
-    .main-visual .proj-item .info-area .btn { width: 220px; height: 50px; padding: 14px 0 16px; margin-top: 30px;}
-    .main-visual .proj-item .info-area .btn .text { font-size: 20px;}
+    .proj-info-area { left: 40px;}
+    .proj-info-area .slide-cate { margin-bottom: 15px; font-size: 28px;}
+    .proj-info-area .slide-title { font-size: 44px;}
+    .proj-info-area .slide-desc { margin-top: 25px; font-size: 32px;}
+    .btn { width: 220px; height: 50px; padding: 14px 0 16px; margin-top: 30px;}
+    .btn .text { font-size: 20px;}
 }
 @media (max-width : 768px) {
     .main-visual .swiper-button-prev, .main-visual .swiper-button-next { width: 50px; height: 50px; margin-top: -25px; margin-left: -25px;} 
     .main-visual .swiper-button-next { margin-top: 25px;}
     .main-visual .swiper-button-next::before { width: 25px; height: 1px;}
-    .main-visual .proj-item .info-area { left: 20px;}
-    .main-visual .proj-item .info-area .slide-cate { margin-bottom: 15px; font-size: 24px;}
-    .main-visual .proj-item .info-area .slide-title { font-size: 38px;}
-    .main-visual .proj-item .info-area .slide-desc { margin-top: 20px; font-size: 26px;}
-    .main-visual .proj-item .info-area .btn { width: 200px; height: 40px; padding: 10px 0 14px; margin-top: 25px;}
-    .main-visual .proj-item .info-area .btn .text { font-size: 16px;}
+    .proj-info-area { left: 20px;}
+    .proj-info-area .slide-cate { margin-bottom: 15px; font-size: 24px;}
+    .proj-info-area .slide-title { font-size: 38px;}
+    .proj-info-area .slide-desc { margin-top: 20px; font-size: 26px;}
+    .btn { width: 200px; height: 40px; padding: 10px 0 14px; margin-top: 25px;}
+    .btn .text { font-size: 16px;}
 }
 @media (max-width : 540px) {
     .main-visual .swiper-pagination { border-radius: 10px;}
     .main-visual .swiper-pagination span { display: block; padding: 0; font-size: 16px; line-height: 30px;}
     .main-visual .swiper-pagination span + span:after { display: none;}
-    .main-visual .proj-item .info-area .slide-cate { margin-bottom: 10px; font-size: 18px;}
-    .main-visual .proj-item .info-area .slide-title { font-size: 32px;}
-    .main-visual .proj-item .info-area .slide-desc { margin-top: 15px; font-size: 16px;}
-    .main-visual .proj-item .info-area .btn { width: 150px; height: 40px; padding: 10px 0 14px; margin-top: 20px;}
-    .main-visual .proj-item .info-area .btn .text { font-size: 16px;}
+    .proj-info-area .slide-cate { margin-bottom: 10px; font-size: 18px;}
+    .proj-info-area .slide-title { font-size: 32px;}
+    .proj-info-area .slide-desc { margin-top: 15px; font-size: 16px;}
+    .btn { width: 150px; height: 40px; padding: 10px 0 14px; margin-top: 20px;}
+    .btn .text { font-size: 16px;}
 }
 
 /* 서브비주얼 */
-.sub-visual { position: relative; width: 100vw; height : calc(var(--vh, 1vh) * 100); background : rgb(0, 0, 255);}
+.sub-visual { position: relative; width: 100vw; height : 100vh; background : rgb(0, 0, 255);}
 .sub-visual .slogan { position: absolute; top: 50%; left: 60px; transform: translate(0, -50%); font-size: 120px; line-height: 160px; font-weight: 800; letter-spacing: -2px; color: #fff; animation: sloganInAni 1.5s ease;}
 .sub-visual img { width: 100%; height: 100%; object-fit: cover;}
 .sub-visual .scroll-induce-wrap { position: absolute; left: 50%; bottom: 30px; transform: translateX(-50%); text-align: center;}
@@ -292,6 +293,7 @@
 .work-list .work-item .work-link .info { padding-top: 20px; }
 .work-list .work-item .work-link .info .cate { display: inline-block; font-size: 24px; font-weight: 500;}
 .work-list .work-item .work-link .info .name { display: block; margin-top: 10px; font-size: 36px; font-weight: 700;}
+/* no-data */
 .no-data { padding: 100px 0;}
 .no-data-desc { font-size: 36px;}
 
@@ -314,10 +316,37 @@
 }
 
 /* 상세 */
-.work-view {
-    text-align: center;
+.work-view .work-info + .work-info { margin-top: 80px;}
+.work-view .work-info .info-area .title { font-size: 64px; font-weight: 800;}
+.work-view .work-info .info-area .info-list { margin-top: 25px;}
+.work-view .work-info .info-area .info-list dl { font-size: 0;}
+.work-view .work-info .info-area .info-list dl + dl { margin-top: 15px;}
+.work-view .work-info .info-area .info-list dl dt { display: inline-block; font-size: 24px; font-weight: 600; vertical-align: top;}
+.work-view .work-info .info-area .info-list dl dd { display: inline-block; font-size: 20px; margin-top: 2px; margin-left: 15px; vertical-align: top;}
+.work-view .work-info .info-area .btn, .work-view .btn-area .btn { border-color: #000;}
+.work-view .work-info .info-area .btn:hover, .work-view .btn-area .btn:hover { background: #000;}
+.work-view .work-info .info-area .btn:hover .text, .work-view .btn-area .btn:hover .text { color: #fff;}
+.work-view .work-info .info-area .desc { margin-top: 20px; font-size: 28px; line-height: 42px;}
+.work-view .work-info .video-area, .work-view .work-info .img-area { margin-top: 40px; height: 500px;}
+.work-view .work-info .img-area img { width: 100%; height: 100%; object-fit: cover;}
+.work-view .btn-area { padding-top: 100px; text-align: center;}
+.work-view .btn-area .btn { margin-top: 0;}
+
+@media (max-width : 1024px) {
+    .work-view .work-info + .work-info { margin-top: 40px;}
+    .work-view .work-info .info-area .title { font-size: 36px;}
+    .work-view .work-info .info-area .info-list { margin-top: 15px;}
+    .work-view .work-info .info-area .info-list dl + dl { margin-top: 10px;}
+    .work-view .work-info .info-area .info-list dl dt { font-size: 18px;}
+    .work-view .work-info .info-area .info-list dl dd { font-size: 14px; margin-left: 10px;}
+    .work-view .work-info .info-area .desc { margin-top: 15px; font-size: 20px; line-height: 30px;}
+    .work-view .work-info .video-area, .work-view .work-info .img-area { margin-top: 30px; height: auto;}
 }
-.work-view h2.title { font-size: 64px; font-weight: 800;}
+
+@media (max-width : 768px) {
+    .work-view .work-info .info-area .title { font-size: 28px;}
+    .work-view .work-info .info-area .desc { font-size: 16px; line-height: 24px;}
+}
 
 /* about */
 .about-wrap .info-area { display: flex; flex-direction: row;}
@@ -329,27 +358,33 @@
 .about-wrap .info-area .info .info-text:first-child { font-size: 32px; line-height: 48px;}
 .about-wrap .info-area .info .info-text + .info-text { margin-top: 35px;}
 
-.about-wrap .personality-area { margin-top: 150px;}
-.about-wrap .personality-area .personality-card-list { display: flex;}
-.about-wrap .personality-area .personality-card-list .personality-card-item { position: relative; width: calc((100% - 60px)/3); }
-.about-wrap .personality-area .personality-card-list .personality-card-item ~ .personality-card-item { margin-left: 30px;}
-.about-wrap .personality-area .personality-card-list .personality-card-item .card-front,
-.about-wrap .personality-area .personality-card-list .personality-card-item .card-back { width: 100%; height: 100%; padding: 20px; border-radius: 15px;}
-.about-wrap .personality-area .personality-card-list .personality-card-item .card-front { border: 2px solid #000; background-color: #fff;}
-.about-wrap .personality-area .personality-card-list .personality-card-item .card-front .num { display: inline-block; font-size: 40px;}
-.about-wrap .personality-area .personality-card-list .personality-card-item .card-front .title { display: block; margin: 120px 0 160px; font-size: 64px; font-weight: 700; text-align: center;}
-.about-wrap .personality-area .personality-card-list .personality-card-item .card-back { display: none; border: none; background-color: #000;}
-.about-wrap .personality-area .personality-card-list .personality-card-item .card-back .text { display: block; font-size: 18px; color: #fff;}
-.about-wrap .personality-area .personality-card-list .personality-card-item .card-back .text + .text { margin-top: 30px;}
-.about-wrap .personality-area .personality-card-list .personality-card-item:hover .card-front { display: none;}
-.about-wrap .personality-area .personality-card-list .personality-card-item:hover .card-back { display: block;}
+.about-wrap .skill-area { margin-top: 100px;}
+.about-wrap .skill-area .skill-list{ display: flex;}
+.about-wrap .skill-area .skill-list .skill-item { width: calc(100% /3); padding: 15px; text-align: center;}
+.about-wrap .skill-area .skill-list .skill-item:nth-child(1) { transition-delay: 0.1s;}
+.about-wrap .skill-area .skill-list .skill-item:nth-child(2) { transition-delay: 0.2s;}
+.about-wrap .skill-area .skill-list .skill-item:nth-child(3) { transition-delay: 0.3s;}
+.about-wrap .skill-area .skill-list .skill-item .title { display: block; font-size: 36px; font-weight: 700;}
+.about-wrap .skill-area .skill-list .skill-item .desc { display: block; margin-top: 30px; font-size: 24px; line-height: 32px; }
+
 @media (max-width : 1024px) {
-    .about-wrap .info-area {  flex-direction: column;}
+    .about-wrap .info-area { flex-direction: column;}
     .about-wrap .info-area .img, .about-wrap .info-area .info {width: 100%;}
     .about-wrap .info-area .info { padding-left: 0;}
     .about-wrap .info-area .info .info-text { font-size: 18px; line-height: 26px;}
     .about-wrap .info-area .info .info-text:first-child { font-size: 26px; line-height: 32px;}
     .about-wrap .info-area .info .info-text + .info-text { margin-top: 15px;}
+
+    .about-wrap .skill-area { margin-top: 75px;}
+    .about-wrap .skill-area .skill-list .skill-item .title { font-size: 28px;}
+    .about-wrap .skill-area .skill-list .skill-item .desc { margin-top: 20px; font-size: 18px; line-height: 26px; }
+}
+
+@media (max-width : 768px) {
+    .about-wrap .skill-area { margin-top: 50px;}
+    .about-wrap .skill-area .skill-list{ flex-direction: column;}
+    .about-wrap .skill-area .skill-list .skill-item { width: 100%;}
+    .about-wrap .skill-area .skill-list .skill-item + .skill-item { margin-top: 20px;}
 }
 
 

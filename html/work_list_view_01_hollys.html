@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LTSportfolio</title>
-    <link rel="shortcut icon" href="./assets/images/favicon/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="../assets/images/favicon/favicon.png" sizes="32x32" type="image/png">
 
     <link rel="stylesheet" href="../assets/css/style.css">
 
@@ -14,7 +14,7 @@
     <div class="wrapper">
         <header class="header-wrapper fix-header">
             <h1 class="logo">
-                <a href="#" class="logo-link">
+                <a href="../index.html" class="logo-link">
                     <svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 85 35" preserveAspectRatio="xMidYMid meet">
                         <g transform="translate(0.000000,35.000000) scale(0.100000,-0.100000)">
                             <path d="M10 180 l0 -170 110 0 110 0 0 30 0 29 -72 3 -73 3 -3 138 -3 137 -34 0 -35 0 0 -170z"/>
@@ -34,7 +34,7 @@
             <div class="allmenu-wrap">
                 <div class="fix-header">
                     <h1 class="logo">
-                        <a href="#" class="logo-link">
+                        <a href="../index.html" class="logo-link">
                             <svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 85 35" preserveAspectRatio="xMidYMid meet">
                                 <g transform="translate(0.000000,35.000000) scale(0.100000,-0.100000)">
                                     <path d="M10 180 l0 -170 110 0 110 0 0 30 0 29 -72 3 -73 3 -3 138 -3 137 -34 0 -35 0 0 -170z"/>
@@ -52,30 +52,31 @@
                     </button>
                     <!-- // btn-toggle -->
                 </div>
+                <!-- // fix-header -->
                 <div class="menu-area">
                     <div class="gnb-box">
                         <nav class="gnb">
                             <ul>
                                 <li>
-                                    <a href="javascript:">
+                                    <a href="../index.html">
                                         <span class="hover-line"></span>
                                         <span class="name">HOME</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:">
+                                    <a href="../html/about.html">
                                         <span class="hover-line"></span>
                                         <span class="name">ABOUT</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:">
+                                    <a href="../html/work_list.html">
                                         <span class="hover-line"></span>
                                         <span class="name">WORK</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="javascript:">
+                                    <a href="../html/contect.html">
                                         <span class="hover-line"></span>
                                         <span class="name">CONTACT</span>
                                     </a>
@@ -86,18 +87,19 @@
                     <div class="info-box">
                         <dl class="info">
                             <dt>Mail</dt>
-                            <dd><a href="javascipt:">leetsseop@naver.com</a></dd>
+                            <dd><a href="mailto:leetsseop@naver.com">leetsseop@naver.com</a></dd>
                         </dl>
                         <dl class="info">
                             <dt>Tel</dt>
-                            <dd><a href="javascript:">010-2639-1700</a></dd>
+                            <dd><a href="tel:010-2639-1700">010-2639-1700</a></dd>
                         </dl>
                         <dl class="info">
                             <dt>Github</dt>
-                            <dd><a href="javascript:">github.com/koreaseop</a></dd>
+                            <dd><a href="https://github.com/tseop" target="_blank">github.com/tseop</a></dd>
                         </dl>
                     </div>
                 </div>
+                <!-- // menu-area -->
             </div>
             <!-- // allmenu-wrap -->
         </header>
@@ -105,7 +107,13 @@
         <main class="container-wrapper">
             <section class="work-section">
                 <div class="sub-visual">
-                    <img src="../assets/images/hollys_mockup_img_02.jpg" alt="">
+                    <div class="img-area"><img src="../assets/images/hollys_mockup_img_02.jpg" alt="할리스커피 목업이미지"></div>
+                    <div class="proj-info-area">
+                        <div class="slide-cate">반응형</div>
+                        <h2 class="slide-title">HOLLYS COFFEE</h2>
+                        <div class="slide-desc">할리스커피 반응형 리뉴얼 페이지입니다.</div>
+                        <a href="https://tseop.github.io/Hollys/Hollys/html/main/main.html" target="_blank"  class="btn"><span class="text">SITE</span></a>
+                    </div>
                     <div class="scroll-induce-wrap">
                         <span class="text">SCROLL</span>
                         <span class="ico-scroll-induce"></span>
@@ -113,34 +121,63 @@
                 </div>
                 <div class="wrap">
                     <div class="work-view">
-                        <h2 class="title animate">HOLLYS COFFEE</h2>
-                        <div class="text animate">할리스커피 반응형 리뉴얼 페이지입니다.</div>
-                        <ol class="work-info-list">
-                            <li class="work-info-item">
-                                <div class="info">
-                                    <span class="num">01</span>
-                                    <span class="info-tit">OVERVIEW</span>
-                                    <span class="info-txt"></span>
+                        <div class="work-info animate">
+                            <div class="info-area">
+                                <div class="title">HOLLYS COFFEE</div>
+                                <div class="info-list">
+                                    <dl>
+                                        <dt>TYPE</dt>
+                                        <dd>반응형</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>기술 스택</dt>
+                                        <dd>HTML, CSS, jQuery, Javascript</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>기여도</dt>
+                                        <dd>100%</dd>
+                                    </dl>
                                 </div>
-                                <div class="img"></div>
-                            </li>
-                            <li class="work-info-item">
-                                <div class="info">
-                                    <span class="num">02</span>
-                                    <span class="info-tit"></span>
-                                    <span class="info-txt"></span>
-                                </div>
-                                <div class="img"></div>
-                            </li>
-                            <li class="work-info-item">
-                                <div class="info">
-                                    <span class="num">03</span>
-                                    <span class="info-tit"></span>
-                                    <span class="info-txt"></span>
-                                </div>
-                                <div class="img"></div>
-                            </li>
-                        </ol>
+                                <div class="desc">기존에 있던 할리스커피 적응형 페이지 구조를 반응형 구조로 변경하고 다양했던 메뉴를 간결하고 직관적으로 리뉴얼했습니다.<br>메인페이지, 메뉴 목록ㆍ상세페이지, 공지 목록ㆍ상세페이지, 이벤트 목록ㆍ상세페이지로 총 7페이지로 구성하여 제작하였습니다.</div>
+                                <a href="https://tseop.github.io/Hollys/Hollys/html/main/main.html" target="_blank"  class="btn"><span class="text">SITE</span></a>
+                            </div>
+                        </div>
+                        <!-- // work-info -->
+                        <div class="work-info animate">
+                            <div class="info-area">
+                                <div class="title">MAIN</div>
+                                <div class="desc">메인페이지에 신메뉴에 대한 콘텐츠 영역을 추가하였으며 전체적으로 기존의 페이지보다 직관적으로 영역을 구성하였습니다.<br>Swiper, 스크롤 애니메이션 기능을 구현하여 보다 동적으로 페이지를 제작하였습니다.</div>
+                            </div>
+                            <div class="video-area">
+                                <video width="100%" height="100%" poster="../assets/images/hollys_viedo_poster.png" autoplay loop muted>
+                                    <source src="../assets/images/video/hollys_video_main.mp4">
+                                </video>
+                            </div>
+                        </div>
+                        <!-- // work-info -->
+                        <div class="work-info animate">
+                            <div class="info-area">
+                                <div class="title">SUB</div>
+                                <div class="desc">메뉴, 공지사항, 이벤트에 대한 목록ㆍ상세페이지로 구성하였으며 기존의 디자인을 수정하여 페이지를 제작하였습니다.</div>
+                            </div>
+                            <div class="img-area">
+                                <img src="../assets/images/hollys_mockup_img_04.jpg" alt="할리스커피 서브페이지 목업이미지">
+                            </div>
+                        </div>
+                        <!-- // work-info -->
+                        <div class="work-info animate">
+                            <div class="info-area">
+                                <div class="title">MOBILE</div>
+                                <div class="desc">뷰포트와 CSS 미디어쿼리로 태블릿, 모바일 스마트폰등 모든 디스플레이의 종류에 따라서 화면크기가 자동으로 변하게 제작하였습니다. </div>
+                            </div>
+                            <div class="img-area">
+                                <img src="../assets/images/hollys_mockup_img_05.jpg" alt="할리스커피 모바일페이지 목업이미지">
+                            </div>
+                        </div>
+                        <!-- // work-info -->
+                        <div class="btn-area animate">
+                            <a href="./work_list.html" target="_blank"  class="btn"><span class="text">LIST</span></a>
+                        </div>
                     </div>
                     <!-- // work-view -->
                 </div>
