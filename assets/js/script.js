@@ -71,30 +71,10 @@ function setScrollAnimate(){
         })
     });
 }
-function setMoheight(){
-    window.addEventListener('resize', () => {
-        const vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-      });
-    // const vh = window.innerHeight * 0.01;   // [1]
-    // document.documentElement.style.setProperty('--vh', `${vh}px`)
-    // const handleResize = () => {
-    //     const vh = window.innerHeight * 0.01;
-    //     document.documentElement.style.setProperty("--vh", `${vh}px`);
-    // };
-    
-    // useEffect(() => {
-    //     window.addEventListener("resize", handleResize);
-    //     return () => {
-    //       window.removeEventListener("resize", handleResize);
-    //     };
-    // }, []);
-}
 
 document.addEventListener('DOMContentLoaded', function(){
     setFixedHeader();
     setAllMenu();
     setTabs();
     setScrollAnimate();
-    setMoheight();
 });
