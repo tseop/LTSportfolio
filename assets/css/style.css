@@ -12,7 +12,7 @@
     clip: rect(1px, 1px, 1px, 1px);
 }
 
-.wrapper { position: relative; overflow: hidden; background: #fff;}
+.wrapper { position: relative; overflow: hidden; height: 100%; background: #fff;}
 /* 기본해상도 */
 .container-wrapper .wrap { padding: 100px 60px 150px;}
 
