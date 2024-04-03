@@ -4,7 +4,11 @@ function setScreenSize() {
 
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-  window.addEventListener('resize', () => setScreenSize());
+  window.addEventListener('resize', () => {
+    let vh = window.innerHeight * 0.01;
+
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  });
 }
 
 // 스크롤 헤더 고정
