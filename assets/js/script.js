@@ -1,3 +1,12 @@
+// 모바일 화면 리사이즈
+function setScreenSize() {
+  let vh = window.innerHeight * 0.01;
+
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+  window.addEventListener('resize', () => setScreenSize());
+}
+
 // 스크롤 헤더 고정
 function setFixedHeader() {
     let header = document.querySelector('header.fix-header');
@@ -73,6 +82,7 @@ function setScrollAnimate(){
 }
 
 document.addEventListener('DOMContentLoaded', function(){
+    setScreenSize();
     setFixedHeader();
     setAllMenu();
     setTabs();
