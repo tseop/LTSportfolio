@@ -181,9 +181,9 @@
     .btn { width: 150px; height: 40px; padding: 10px 0 14px; margin-top: 20px;}
     .btn .text { font-size: 16px;}
 }
-
+/* height: calc(var(--vh, 1vh) * 100); */
 /* 서브비주얼 */
-.sub-visual { position: relative; width: 100vw; height: calc(var(--vh, 1vh) * 100); background: #0b0bca;}
+.sub-visual { position: relative; width: 100vw; min-height: calc(100vh - env(safe-area-inset-bottom, 0) - env(safe-area-inset-top, 0)); background: #0b0bca;}
 .sub-visual .slogan { position: absolute; top: 50%; left: 60px; transform: translate(0, -50%); font-size: 120px; line-height: 160px; font-weight: 800; letter-spacing: -2px; color: #fff; animation: sloganInAni 1.5s ease;}
 .sub-visual img { width: 100%; height: 100%; object-fit: cover;}
 .sub-visual .scroll-induce-wrap { position: absolute; left: 50%; bottom: 30px; transform: translateX(-50%); text-align: center;}
