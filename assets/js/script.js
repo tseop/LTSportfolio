@@ -1,15 +1,15 @@
 // 모바일 화면 리사이즈
-// function setScreenSize() {
-//   let vh = window.innerHeight * 0.01;
+function setScreenSize() {
+    let vh = window.innerHeight * 0.01;
 
-//   document.documentElement.style.setProperty('--vh', `${vh}px`);
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-//   window.addEventListener('resize', () => {
-//     let vh = window.innerHeight * 0.01;
+    window.addEventListener('resize', () => {
+        let vh = window.innerHeight * 0.01;
 
-//     document.documentElement.style.setProperty('--vh', `${vh}px`);
-//   });
-// }
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
+}
 
 // 스크롤 헤더 고정
 function setFixedHeader() {
@@ -86,7 +86,7 @@ function setScrollAnimate(){
 }
 
 document.addEventListener('DOMContentLoaded', function(){
-    // setScreenSize();
+    setScreenSize();
     setFixedHeader();
     setAllMenu();
     setTabs();
