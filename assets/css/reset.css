@@ -35,6 +35,8 @@ body {
 	line-height: 1;
     color: #000;
 	background: #fff;
+	overflow: hidden;
+  	touch-action: none;
 }
 ol, ul {
 	list-style: none;
